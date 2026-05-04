@@ -1,0 +1,33 @@
+# ============================================================
+# IEEE-CIS Fraud Detection — dependencies
+# Notes:
+#   * On Kaggle Notebooks, almost all of these come pre-installed.
+#     The only ones you usually need to `pip install` on Kaggle are
+#     `mlflow` and `dagshub`.
+#   * Versions below match what Kaggle's default Python image ships
+#     with as of 2026-Q1. They will also work locally with Python 3.10+.
+# ============================================================
+
+# --- core stack ---
+numpy>=1.24
+pandas>=2.0
+scipy>=1.11
+
+# --- viz ---
+matplotlib>=3.7
+seaborn>=0.13
+
+# --- classical ML ---
+scikit-learn>=1.3
+xgboost>=2.0
+lightgbm>=4.0   # optional, in case you want to compare
+
+# --- deep learning (for MLP notebook) ---
+tensorflow>=2.15
+
+# --- hyperparameter optimization ---
+optuna>=3.5
+
+# --- experiment tracking ---
+mlflow>=2.10
+dagshub>=0.3.30

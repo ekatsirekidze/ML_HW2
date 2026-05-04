@@ -1,0 +1,54 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ===== Virtual environments (in case you use one locally later) =====
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ===== MLflow local store (we use DagsHub remote, not local) =====
+mlruns/
+mlartifacts/
+
+# ===== Data (Kaggle CSVs are huge, keep out of git) =====
+data/
+*.csv
+*.parquet
+*.feather
+*.pkl
+*.joblib
+!requirements.txt
+
+# ===== Submissions =====
+submission*.csv
+
+# ===== Secrets =====
+.env
+.env.*
+*.key
+kaggle.json
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
