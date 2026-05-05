@@ -471,7 +471,7 @@ def build_notebook(name: str, cfg: dict) -> dict:
         "# =============================================================",
         "import os, sys, subprocess, shutil",
         "",
-        'REPO_URL = "https://github.com/<YOUR_GH_USERNAME>/<YOUR_REPO_NAME>.git"   # only used for git-clone fallback',
+        'REPO_URL = "https://github.com/ekatsirekidze/ML_HW2.git"   # only used for git-clone fallback',
         "",
         'ON_KAGGLE = os.path.exists("/kaggle/input")',
         "SRC_FOUND = None",

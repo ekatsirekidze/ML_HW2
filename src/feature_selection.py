@@ -97,13 +97,17 @@ class ColumnSubsetSelector(BaseEstimator, TransformerMixin):
     """
 
     def __init__(self, keep: List[str]):
-        self.keep = list(keep)
+        # Store as-is. sklearn.clone() does an identity check on constructor
+        # params (`param1 is param2`); copying or wrapping (e.g. list(keep))
+        # would break cross_validate / GridSearchCV with this transformer.
+        self.keep = keep
 
     def fit(self, X: pd.DataFrame, y=None):
         return self
 
     def transform(self, X: pd.DataFrame) -> pd.DataFrame:
-        present = [c for c in self.keep if c in X.columns]
+        keep = self.keep if self.keep is not None else []
+        present = [c for c in keep if c in X.columns]
         return X[present].copy()
 
     def get_feature_names_out(self, input_features=None):
